@@ -21,6 +21,7 @@ type Parser = Parsec Void T.Text
 main = do
   contents <- TIO.readFile "input3"
   vals <- parseIt pWire contents
+  -- print vals
   let wire1 = sew (0,0) (vals !! 0)
       wire2 = sew (0,0) (vals !! 1)
       (wire1hs, wire2hs) = (HS.fromList wire1,HS.fromList wire2)

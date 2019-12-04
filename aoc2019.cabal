@@ -38,3 +38,14 @@ executable day3
                , sequence
                , lens
                , unordered-containers
+
+executable day4
+  import: stanza
+  main-is: Main4.hs
+  build-depends: text
+               , containers
+               , text
+               , megaparsec
+               , sequence
+               , lens
+               , unordered-containers
