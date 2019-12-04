@@ -1,0 +1,40 @@
+cabal-version:       2.4
+name:                aoc2019
+version:             0.1.0.0
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Shae Erisson
+maintainer:          shae@scannedinavian.com
+build-type:          Simple
+extra-source-files:  CHANGELOG.md
+
+common stanza
+        default-language: Haskell2010
+        build-depends: base == 4.*
+        ghc-options: -O2 -Wall
+
+executable day1
+  main-is:             Main1.hs
+  build-depends:       base >=4.12 && <4.13
+  default-language:    Haskell2010
+
+executable day2
+  import: stanza
+  main-is: Main2.hs
+  build-depends: text
+               , containers
+               , text
+               , megaparsec
+               , sequence
+               , lens
+
+executable day3
+  import: stanza
+  main-is: Main3.hs
+  build-depends: text
+               , containers
+               , text
+               , megaparsec
+               , sequence
+               , lens
+               , unordered-containers
